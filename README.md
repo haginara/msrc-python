@@ -1,3 +1,8 @@
+Preparation
+-----------
+### Install requirements
+	pip install requests
+
 ### USE .env file
 Put MSRC_KEY on .env file
 .env
@@ -5,3 +10,7 @@ Put MSRC_KEY on .env file
 
 Export env from .env file
 	export $(cat .env | xargs)
+
+Usage
+-----
+	python msrc.py CVE-2018-8174
