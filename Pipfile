@@ -7,6 +7,7 @@ verify_ssl = true
 flake8 = "*"
 black = {git = "git://github.com/psf/black"}
 pylint = "*"
+pytest = "*"
 
 [packages]
 requests = "*"
