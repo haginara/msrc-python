@@ -4,10 +4,12 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-ipython = "*"
+flake8 = "*"
+black = {git = "git://github.com/psf/black"}
+pylint = "*"
 
 [packages]
 requests = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3"
