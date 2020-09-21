@@ -11,6 +11,24 @@ import requests
 logger = logging.getLogger(__name__)
 
 
+def get_product_name_by_id(cvrf, pid):
+    """ Get product full name by product id
+
+    Args:
+        cvrf (dict): CVRF data
+        pid (int): ProductID
+
+    Returns:
+        Full Product Name (str) or None
+    """
+    products = cvrf['ProductTree']['FullProductName']
+
+    for p in products:
+        if p['ProductID'] == pid:
+            return p['Value']
+    return None
+
+
 class MSRCApi:
     url = "https://api.msrc.microsoft.com"
 
@@ -20,6 +38,23 @@ class MSRCApi:
             "api-key": key,
         }
         self.params = {"api-version": datetime.now().year}
+
+    def get_cvrf_by_month(self, year_month: str):
+        """Get CVRF with year_month
+
+        Args:
+            year_month (str): YYYY-mmm format
+
+        Returns:
+            CVRF (list(dict)) or None
+        """
+        url = f"{self.url}/Updates('{year_month}')"
+        logger.debug(url)
+        response = requests.get(url, headers=self.headers, params=self.params)
+        if response.status_code != 200:
+            raise Exception("Failed to get CVRF")
+        data = response.json()
+        return data
 
     def get_cvrf_by_cve(self, cve: str):
         """Get CVRF with CVE
@@ -130,6 +165,23 @@ class MSRCApi:
             if cvrf["ID"].startswith(year):
                 yield cvrf
 
+    def get_cves_by_cvrf(self, cvrf_id):
+        """Get CVEs by CVRF ID
+
+        Args:
+            cvrf_id (str): CVRF id
+
+        Returns:
+            CVEs
+        """
+        cvrf = self.get_cvrf_by_id(cvrf_id)
+        CVEs = []
+        if 'Vulnerability' in cvrf:
+            for vuln in (cvrf['Vulnerability']):
+                title = vuln['Title']['Value']
+                CVEs.append((vuln['CVE'], title))
+        return CVEs
+
     def get_all_cvrf(self):
         """Get all CVRFs
 
@@ -150,7 +202,8 @@ class MSRCApi:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("cve", help="CVE ex) CVE-2017-0144")
+    parser.add_argument("search",
+        help="CVE ex) CVE-2017-0144, CVRF ex) 2020-Sep")
     parser.add_argument(
         "-k", "--key", help="MSRC Key, You cand add Environment Variable as 'MSRC_KEY'"
     )
@@ -158,16 +211,21 @@ def main():
     key = os.getenv("MSRC_KEY", None) or options.key
     msrc = MSRCApi(key)
 
-    if not options.cve.upper().startswith("CVE-"):
-        raise SystemExit("CVE should start with CVE-")
-
-    kbs = msrc.get_knowledge_bases_by_cve(options.cve)
-    if len(kbs) == 0:
-        print("No KBs found")
-        raise SystemExit()
-    kbs = list(set(kbs))
-    for kb in kbs:
-        print("KB" + kb)
+    search = options.search
+    if search.upper().startswith("CVE"):
+        kbs = msrc.get_knowledge_bases_by_cve(options.cve)
+        if len(kbs) == 0:
+            print("No KBs found")
+            raise SystemExit()
+        kbs = list(set(kbs))
+        for kb in kbs:
+            print("KB" + kb)
+    elif re.match(r"\d{4}\-\w{3}", search):
+        cves = msrc.get_cves_by_cvrf(search)
+        for cve in cves:
+            print(cve[0], cve[1])
+    else:
+        raise SystemExit(f"CVE should start with CVE- or yyyy-m format, {search}")
 
 
 if __name__ == "__main__":
