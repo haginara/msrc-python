@@ -1,6 +1,5 @@
 # coding: utf-8
 from datetime import datetime
-from typing import Dict, List, Optional
 import os
 import re
 import logging
@@ -196,17 +195,17 @@ class MSRCApi:
         values = data["value"]
         for value in values:
             # Example:
-            # {'ID': '2019-Nov', 'Alias': '2019-Nov', 'DocumentTitle': 'November 2019 Security Updates', 'Severity': None, 'InitialReleaseDate': '2019-11-12T08:00:00Z', 'CurrentReleaseDate': '2020-02-03T08:00:00Z', 'CvrfUrl': 'https://api.msrc.microsoft.com/cvrf/2019-Nov?api-Version=2020'}
+            # {'ID': '2019-Nov', 'Alias': '2019-Nov', 'DocumentTitle': 'November 2019 Security Updates',
+            #   'Severity': None, 'InitialReleaseDate': '2019-11-12T08:00:00Z',
+            #   'CurrentReleaseDate': '2020-02-03T08:00:00Z',
+            #   'CvrfUrl': 'https://api.msrc.microsoft.com/cvrf/2019-Nov?api-Version=2020'}
             yield value
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("search",
-        help="CVE ex) CVE-2017-0144, CVRF ex) 2020-Sep")
-    parser.add_argument(
-        "-k", "--key", help="MSRC Key, You cand add Environment Variable as 'MSRC_KEY'"
-    )
+    parser.add_argument("search", help="CVE ex) CVE-2017-0144, CVRF ex) 2020-Sep")
+    parser.add_argument("-k", "--key", help="MSRC Key, You cand add Environment Variable as 'MSRC_KEY'")
     options = parser.parse_args()
     key = os.getenv("MSRC_KEY", None) or options.key
     msrc = MSRCApi(key)
