@@ -7,6 +7,10 @@ import argparse
 
 import requests
 
+__version_info__ = (0, 0, 1)
+__version__ = '.'.join(map(str, __version_info__))
+
+
 logger = logging.getLogger(__name__)
 
 
@@ -114,7 +118,7 @@ class MSRCApi:
         if cvrf is None:
             logger.debug("No CVRF found")
             return []
-        print(f"Matched CVRF: {cvrf['DocumentTracking']['Identification']['ID']}")
+        print(f"Matched CVRF: {cvrf['DocumentTracking']['Identification']['ID']['Value']}")
         KBs = []
         for vuln in cvrf["Vulnerability"]:
             if vuln["CVE"] == cve:
@@ -177,7 +181,7 @@ class MSRCApi:
         CVEs = []
         if 'Vulnerability' in cvrf:
             for vuln in (cvrf['Vulnerability']):
-                title = vuln['Title']['Value']
+                title = vuln['Title'].get('Value', 'None')
                 CVEs.append((vuln['CVE'], title))
         return CVEs
 
@@ -204,18 +208,18 @@ class MSRCApi:
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("search", help="CVE ex) CVE-2017-0144, CVRF ex) 2020-Sep")
+    parser.add_argument('-v', '--version', action='version', version=__version__)
     parser.add_argument("-k", "--key", help="MSRC Key, You cand add Environment Variable as 'MSRC_KEY'")
+    parser.add_argument("search", help="CVE ex) CVE-2017-0144, CVRF ex) 2020-Sep")
     options = parser.parse_args()
     key = os.getenv("MSRC_KEY", None) or options.key
     msrc = MSRCApi(key)
 
     search = options.search
     if search.upper().startswith("CVE"):
-        kbs = msrc.get_knowledge_bases_by_cve(options.cve)
+        kbs = msrc.get_knowledge_bases_by_cve(options.search)
         if len(kbs) == 0:
-            print("No KBs found")
-            raise SystemExit()
+            raise SystemExit("No KBs found")
         kbs = list(set(kbs))
         for kb in kbs:
             print("KB" + kb)
