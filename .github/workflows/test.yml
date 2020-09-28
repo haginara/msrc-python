@@ -2,9 +2,9 @@ name: Test msrc.py
 
 on:
   push:
-    branches: [ develop ]
+    branches: '*'
   pull_request:
-    branches: [ develop ]
+    branches: '*'
 
 jobs:
   build:
