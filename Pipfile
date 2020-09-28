@@ -8,6 +8,8 @@ flake8 = "*"
 black = {git = "git://github.com/psf/black"}
 pylint = "*"
 pytest = "*"
+wheel = "*"
+twine = "*"
 
 [packages]
 requests = "*"
