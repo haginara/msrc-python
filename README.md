@@ -1,10 +1,13 @@
 MSRC(Microsoft Security Research Center) API for python
 ============================================
 
-Preparation
+Installation
+------------
+	pip install msrc
+
+Requirements
 -----------
-### Install requirements
-	pip install requests
+* requests
 
 ### USE .env file
 Put MSRC_KEY on .env file
