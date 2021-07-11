@@ -1,20 +1,18 @@
 # coding: utf-8
-from datetime import datetime
-import os
 import re
 import logging
 import argparse
 
 import requests
-from requests.api import request
 
 __version_info__ = (0, 0, 1)
-__version__ = '.'.join(map(str, __version_info__))
+__version__ = ".".join(map(str, __version_info__))
 
 
 logger = logging.getLogger(__name__)
 
 msrc_url = "https://api.msrc.microsoft.com"
+
 
 def get_value(data, key, default=None):
     """
@@ -38,7 +36,7 @@ def get_value(data, key, default=None):
 
 
 def get_product_name_by_id(cvrf, pid):
-    """ Get product full name by product id
+    """Get product full name by product id
 
     Args:
         cvrf (dict): CVRF data
@@ -47,17 +45,18 @@ def get_product_name_by_id(cvrf, pid):
     Returns:
         Full Product Name (str) or None
     """
-    products = cvrf['ProductTree']['FullProductName']
+    products = cvrf["ProductTree"]["FullProductName"]
 
     for p in products:
-        if p['ProductID'] == pid:
-            return p['Value']
+        if p["ProductID"] == pid:
+            return p["Value"]
     return None
 
 
 class JsonDict(object):
     def __init__(self, data):
         self.data = data
+
     def get_value(self, key, default=None):
         return get_value(self.data, key, default)
 
@@ -103,7 +102,9 @@ class Vulnerability(JsonDict):
         self.cve = self.get_value("CVE")
         self.threats = self.get_value("Threats")
         self.products = self.get_value("ProductStatuses.0.ProductID")
-        self.remediations = [Remediation(item) for item in self.get_value("Remediations")]
+        self.remediations = [
+            Remediation(item) for item in self.get_value("Remediations")
+        ]
 
     def __str__(self):
         return f"Vulnerability<{self.cve}>"
@@ -115,17 +116,24 @@ class CVRF(JsonDict):
 
         self.title = self.get_value("DocumentTitle.Value")
         self.type = self.get_value("DocumentType.Value")
-        self.publisher_contact = self.get_value("DocumentPublisher.ContactDetails.Value")
+        self.publisher_contact = self.get_value(
+            "DocumentPublisher.ContactDetails.Value"
+        )
         self.id = self.get_value("DocumentTracking.Identification.ID.Value")
         self.release_date = self.get_value("DocumentTracking.InitialReleaseDate")
         self.updated_date = self.get_value("DocumentTracking.CurrentReleaseDate")
 
-        self.vulnerabilites = [Vulnerability(vuln) for vuln in self.get_value("Vulnerability")]  # Hash is better ?
-        self.products = [Product(product) for product in self.get_value("ProductTree.FullProductName")]
+        self.vulnerabilites = [
+            Vulnerability(vuln) for vuln in self.get_value("Vulnerability")
+        ]  # Hash is better ?
+        self.products = [
+            Product(product)
+            for product in self.get_value("ProductTree.FullProductName")
+        ]
 
     def __str__(self):
         return f"CVRF<{self.title}>"
-    
+
     def get_cve(self, cve_id):
         """
         Find and get a CVE data
@@ -133,6 +141,7 @@ class CVRF(JsonDict):
         for vuln in self.vulnerabilites:
             if vuln.cve == cve_id:
                 return vuln
+
 
 def get_cvrf(cvrf: str):
     """
@@ -151,6 +160,7 @@ def get_cvrf(cvrf: str):
 
     return CVRF(response.json())
 
+
 def get_updates(update_id=None, vul_id=None, year=None):
     """
     Get a list of Microsoft security updates
@@ -163,17 +173,19 @@ def get_updates(update_id=None, vul_id=None, year=None):
     logger.debug(url)
     response = requests.get(url, headers={"Accept": "application/json"})
     if response.status_code != 200:
-        raise Exception("Failed to get a list of MS security udpates, %d" % (response.status_code))
-    updates = response.json()['value']
+        raise Exception(
+            "Failed to get a list of MS security udpates, %d" % (response.status_code)
+        )
+    updates = response.json()["value"]
 
     if vul_id:
-        cvrf = get_cvrf(updates[0]['ID'])
+        cvrf = get_cvrf(updates[0]["ID"])
         return cvrf.get_cve(vul_id)
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('-v', '--version', action='version', version=__version__)
+    parser.add_argument("-v", "--version", action="version", version=__version__)
     parser.add_argument("search", help="CVE ex) CVE-2017-0144, CVRF ex) 2020-Sep")
     options = parser.parse_args()
 
