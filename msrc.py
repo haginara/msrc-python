@@ -12,6 +12,7 @@ __version__ = ".".join(map(str, __version_info__))
 logger = logging.getLogger(__name__)
 
 msrc_url = "https://api.msrc.microsoft.com"
+version = "2.0"
 
 
 def get_value(data, key, default=None):
@@ -23,11 +24,11 @@ def get_value(data, key, default=None):
     """
     try:
         for k in key.split("."):
-            try:
+            if k.isdigit():
                 idx = int(k)
                 data = data[idx]
-            except ValueError:
-                data = data[k]
+            else:
+                data = data.get(k, default)
     except Exception as e:
         if default:
             return default
@@ -86,7 +87,12 @@ class Remediation(JsonDict):
             self.url = None
             self.products = []
         else:
-            self.kb = "KB" + self.get_value("Description.Value")
+            self.kb = ""
+            if (
+                self.get_value("Description.Value")
+                and self.get_value("Description.Value", "").isdigit()
+            ):
+                self.kb = "KB" + self.get_value("Description.Value")
             self.url = self.get_value("URL")
             self.products = self.get_value("ProductID")
 
@@ -124,11 +130,11 @@ class CVRF(JsonDict):
         self.updated_date = self.get_value("DocumentTracking.CurrentReleaseDate")
 
         self.vulnerabilites = [
-            Vulnerability(vuln) for vuln in self.get_value("Vulnerability")
+            Vulnerability(vuln) for vuln in self.get_value("Vulnerability", [])
         ]  # Hash is better ?
         self.products = [
             Product(product)
-            for product in self.get_value("ProductTree.FullProductName")
+            for product in self.get_value("ProductTree.FullProductName", [])
         ]
 
     def __str__(self):
@@ -152,13 +158,29 @@ def get_cvrf(cvrf: str):
     return
     """
 
-    url = f"{msrc_url}/cvrf/v2.0/cvrf/{cvrf}"
+    url = f"{msrc_url}/cvrf/v{version}/cvrf/{cvrf}"
     logger.debug(url)
     response = requests.get(url, headers={"Accept": "application/json"})
     if response.status_code != 200:
         raise Exception("Failed to get CVRF, %d" % (response.status_code))
+    data = response.json()
+    return CVRF(data)
 
-    return CVRF(response.json())
+
+def get_cvrfs(query=None):
+    """
+    Get a list of Microsoft security updates
+    """
+    url = f"{msrc_url}/cvrf/v{version}/"
+    url += f"Updates('{query}')" if query else "updates"
+    logger.debug(url)
+    response = requests.get(url, headers={"Accept": "application/json"})
+    if response.status_code != 200:
+        raise Exception(
+            "Failed to get a list of MS security udpates, " f"{response.status_code}"
+        )
+    cvrfs = response.json().get("value", [])
+    return cvrfs
 
 
 def get_updates(update_id=None, vul_id=None, year=None):
@@ -166,27 +188,24 @@ def get_updates(update_id=None, vul_id=None, year=None):
     Get a list of Microsoft security updates
     """
     query = update_id or vul_id or year or None
-    if query is None:
-        url = f"{msrc_url}/cvrf/v2.0/updates"
-    else:
-        url = f"{msrc_url}/cvrf/v2.0/Updates('{query}')"
-    logger.debug(url)
-    response = requests.get(url, headers={"Accept": "application/json"})
-    if response.status_code != 200:
-        raise Exception(
-            "Failed to get a list of MS security udpates, %d" % (response.status_code)
-        )
-    updates = response.json()["value"]
+    cvrfs = get_cvrfs(query)
 
     if vul_id:
-        cvrf = get_cvrf(updates[0]["ID"])
+        cvrf = get_cvrf(cvrfs[0]["ID"])
         return cvrf.get_cve(vul_id)
+    return [get_cvrf(cvrf["ID"]) for cvrf in cvrfs]
 
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("-v", "--version", action="version", version=__version__)
-    parser.add_argument("search", help="CVE ex) CVE-2017-0144, CVRF ex) 2020-Sep")
+    parser.add_argument(
+        "-v", "--version",
+        action="version", version=__version__
+    )
+    parser.add_argument(
+        "search",
+        help="CVE ex) CVE-2017-0144, CVRF ex) 2020-Sep, KB ex) KB5014699"
+    )
     options = parser.parse_args()
 
     search = options.search
@@ -196,6 +215,15 @@ def main():
         for remediation in cve.remediations:
             if remediation.type == 5:
                 print(remediation.kb, remediation.url)
+    elif search.upper().startswith("KB"):
+        cvrfs = get_cvrfs()
+        for cvrf in cvrfs:
+            cvrf = get_cvrf(cvrf["ID"])
+            for vuln in cvrf.vulnerabilites:
+                for remediation in vuln.remediations:
+                    if remediation.kb == search.upper():
+                        print(f"{remediation.kb}: {remediation.url}")
+                        return
     elif re.match(r"\d{4}\-\w{3}", search):
         cvrf = get_cvrf(search)
         for vuln in cvrf.vulnerabilites:
