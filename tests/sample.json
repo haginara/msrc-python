@@ -1,0 +1,2107 @@
+{
+  "DocumentTitle": {
+    "Value": "July 1, 2021 CVE Release"
+  },
+  "DocumentType": {
+    "Value": "Security Update"
+  },
+  "DocumentPublisher": {
+    "ContactDetails": {
+      "Value": "secure@microsoft.com"
+    },
+    "IssuingAuthority": {
+      "Value": "The Microsoft Security Response Center (MSRC) identifies, monitors, resolves, and responds to security incidents and Microsoft software security vulnerabilities. For more information, see http://www.microsoft.com/security/msrc."
+    },
+    "Type": 0
+  },
+  "DocumentTracking": {
+    "Identification": {
+      "ID": {
+        "Value": "2021-Jul"
+      },
+      "Alias": {
+        "Value": "2021-Jul"
+      }
+    },
+    "Status": 2,
+    "Version": "1.0",
+    "RevisionHistory": [
+      {
+        "Number": "6",
+        "Date": "2021-07-08T07:00:00Z",
+        "Description": {
+          "Value": "July 1, 2021 CVE Release"
+        }
+      }
+    ],
+    "InitialReleaseDate": "2021-07-01T07:00:00Z",
+    "CurrentReleaseDate": "2021-07-08T07:00:00Z"
+  },
+  "DocumentNotes": [
+    {
+      "Title": "Release Notes",
+      "Audience": "Public",
+      "Type": 1,
+      "Ordinal": "0",
+      "Value": "<p>July 1, 2021 CVE Release</p>\n<ul>\n<li><a href=\"https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34527\">CVE-2021-34527</a></li>\n</ul>\n"
+    },
+    {
+      "Title": "Legal Disclaimer",
+      "Audience": "Public",
+      "Type": 5,
+      "Ordinal": "1",
+      "Value": "The information provided in the Microsoft Knowledge Base is provided \"as is\" without warranty of any kind. Microsoft disclaims all warranties, either express or implied, including the warranties of merchantability and fitness for a particular purpose. In no event shall Microsoft Corporation or its suppliers be liable for any damages whatsoever including direct, indirect, incidental, consequential, loss of business profits or special damages, even if Microsoft Corporation or its suppliers have been advised of the possibility of such damages. Some states do not allow the exclusion or limitation of liability for consequential or incidental damages so the foregoing limitation may not apply."
+    }
+  ],
+  "ProductTree": {
+    "Branch": [
+      {
+        "Items": [
+          {
+            "Items": [
+              {
+                "ProductID": "11568",
+                "Value": "Windows 10 Version 1809 for 32-bit Systems"
+              },
+              {
+                "ProductID": "11569",
+                "Value": "Windows 10 Version 1809 for x64-based Systems"
+              },
+              {
+                "ProductID": "11570",
+                "Value": "Windows 10 Version 1809 for ARM64-based Systems"
+              },
+              {
+                "ProductID": "11571",
+                "Value": "Windows Server 2019"
+              },
+              {
+                "ProductID": "11572",
+                "Value": "Windows Server 2019  (Server Core installation)"
+              },
+              {
+                "ProductID": "11712",
+                "Value": "Windows 10 Version 1909 for 32-bit Systems"
+              },
+              {
+                "ProductID": "11713",
+                "Value": "Windows 10 Version 1909 for x64-based Systems"
+              },
+              {
+                "ProductID": "11714",
+                "Value": "Windows 10 Version 1909 for ARM64-based Systems"
+              },
+              {
+                "ProductID": "11896",
+                "Value": "Windows 10 Version 21H1 for x64-based Systems"
+              },
+              {
+                "ProductID": "11897",
+                "Value": "Windows 10 Version 21H1 for ARM64-based Systems"
+              },
+              {
+                "ProductID": "11898",
+                "Value": "Windows 10 Version 21H1 for 32-bit Systems"
+              },
+              {
+                "ProductID": "11766",
+                "Value": "Windows 10 Version 2004 for 32-bit Systems"
+              },
+              {
+                "ProductID": "11767",
+                "Value": "Windows 10 Version 2004 for ARM64-based Systems"
+              },
+              {
+                "ProductID": "11768",
+                "Value": "Windows 10 Version 2004 for x64-based Systems"
+              },
+              {
+                "ProductID": "11769",
+                "Value": "Windows Server, version 2004 (Server Core installation)"
+              },
+              {
+                "ProductID": "11800",
+                "Value": "Windows 10 Version 20H2 for x64-based Systems"
+              },
+              {
+                "ProductID": "11801",
+                "Value": "Windows 10 Version 20H2 for 32-bit Systems"
+              },
+              {
+                "ProductID": "11802",
+                "Value": "Windows 10 Version 20H2 for ARM64-based Systems"
+              },
+              {
+                "ProductID": "11803",
+                "Value": "Windows Server, version 20H2 (Server Core Installation)"
+              },
+              {
+                "ProductID": "10729",
+                "Value": "Windows 10 for 32-bit Systems"
+              },
+              {
+                "ProductID": "10735",
+                "Value": "Windows 10 for x64-based Systems"
+              },
+              {
+                "ProductID": "10852",
+                "Value": "Windows 10 Version 1607 for 32-bit Systems"
+              },
+              {
+                "ProductID": "10853",
+                "Value": "Windows 10 Version 1607 for x64-based Systems"
+              },
+              {
+                "ProductID": "10816",
+                "Value": "Windows Server 2016"
+              },
+              {
+                "ProductID": "10855",
+                "Value": "Windows Server 2016  (Server Core installation)"
+              },
+              {
+                "ProductID": "10481",
+                "Value": "Windows 8.1 for 32-bit systems"
+              },
+              {
+                "ProductID": "10482",
+                "Value": "Windows 8.1 for x64-based systems"
+              },
+              {
+                "ProductID": "10484",
+                "Value": "Windows RT 8.1"
+              },
+              {
+                "ProductID": "10378",
+                "Value": "Windows Server 2012"
+              },
+              {
+                "ProductID": "10379",
+                "Value": "Windows Server 2012 (Server Core installation)"
+              },
+              {
+                "ProductID": "10483",
+                "Value": "Windows Server 2012 R2"
+              },
+              {
+                "ProductID": "10543",
+                "Value": "Windows Server 2012 R2 (Server Core installation)"
+              }
+            ],
+            "Type": 1,
+            "Name": "Windows"
+          },
+          {
+            "Items": [
+              {
+                "ProductID": "10047",
+                "Value": "Windows 7 for 32-bit Systems Service Pack 1"
+              },
+              {
+                "ProductID": "10048",
+                "Value": "Windows 7 for x64-based Systems Service Pack 1"
+              },
+              {
+                "ProductID": "9312",
+                "Value": "Windows Server 2008 for 32-bit Systems Service Pack 2"
+              },
+              {
+                "ProductID": "10287",
+                "Value": "Windows Server 2008 for 32-bit Systems Service Pack 2 (Server Core installation)"
+              },
+              {
+                "ProductID": "9318",
+                "Value": "Windows Server 2008 for x64-based Systems Service Pack 2"
+              },
+              {
+                "ProductID": "9344",
+                "Value": "Windows Server 2008 for x64-based Systems Service Pack 2 (Server Core installation)"
+              },
+              {
+                "ProductID": "10051",
+                "Value": "Windows Server 2008 R2 for x64-based Systems Service Pack 1"
+              },
+              {
+                "ProductID": "10049",
+                "Value": "Windows Server 2008 R2 for x64-based Systems Service Pack 1 (Server Core installation)"
+              }
+            ],
+            "Type": 1,
+            "Name": "ESU"
+          }
+        ],
+        "Type": 0,
+        "Name": "Microsoft"
+      }
+    ],
+    "FullProductName": [
+      {
+        "ProductID": "10047",
+        "Value": "Windows 7 for 32-bit Systems Service Pack 1"
+      },
+      {
+        "ProductID": "10048",
+        "Value": "Windows 7 for x64-based Systems Service Pack 1"
+      },
+      {
+        "ProductID": "10049",
+        "Value": "Windows Server 2008 R2 for x64-based Systems Service Pack 1 (Server Core installation)"
+      },
+      {
+        "ProductID": "10051",
+        "Value": "Windows Server 2008 R2 for x64-based Systems Service Pack 1"
+      },
+      {
+        "ProductID": "10287",
+        "Value": "Windows Server 2008 for 32-bit Systems Service Pack 2 (Server Core installation)"
+      },
+      {
+        "ProductID": "10378",
+        "Value": "Windows Server 2012"
+      },
+      {
+        "ProductID": "10379",
+        "Value": "Windows Server 2012 (Server Core installation)"
+      },
+      {
+        "ProductID": "10481",
+        "Value": "Windows 8.1 for 32-bit systems"
+      },
+      {
+        "ProductID": "10482",
+        "Value": "Windows 8.1 for x64-based systems"
+      },
+      {
+        "ProductID": "10483",
+        "Value": "Windows Server 2012 R2"
+      },
+      {
+        "ProductID": "10484",
+        "Value": "Windows RT 8.1"
+      },
+      {
+        "ProductID": "10543",
+        "Value": "Windows Server 2012 R2 (Server Core installation)"
+      },
+      {
+        "ProductID": "10729",
+        "Value": "Windows 10 for 32-bit Systems"
+      },
+      {
+        "ProductID": "10735",
+        "Value": "Windows 10 for x64-based Systems"
+      },
+      {
+        "ProductID": "10816",
+        "Value": "Windows Server 2016"
+      },
+      {
+        "ProductID": "10852",
+        "Value": "Windows 10 Version 1607 for 32-bit Systems"
+      },
+      {
+        "ProductID": "10853",
+        "Value": "Windows 10 Version 1607 for x64-based Systems"
+      },
+      {
+        "ProductID": "10855",
+        "Value": "Windows Server 2016  (Server Core installation)"
+      },
+      {
+        "ProductID": "11568",
+        "Value": "Windows 10 Version 1809 for 32-bit Systems"
+      },
+      {
+        "ProductID": "11569",
+        "Value": "Windows 10 Version 1809 for x64-based Systems"
+      },
+      {
+        "ProductID": "11570",
+        "Value": "Windows 10 Version 1809 for ARM64-based Systems"
+      },
+      {
+        "ProductID": "11571",
+        "Value": "Windows Server 2019"
+      },
+      {
+        "ProductID": "11572",
+        "Value": "Windows Server 2019  (Server Core installation)"
+      },
+      {
+        "ProductID": "11712",
+        "Value": "Windows 10 Version 1909 for 32-bit Systems"
+      },
+      {
+        "ProductID": "11713",
+        "Value": "Windows 10 Version 1909 for x64-based Systems"
+      },
+      {
+        "ProductID": "11714",
+        "Value": "Windows 10 Version 1909 for ARM64-based Systems"
+      },
+      {
+        "ProductID": "11766",
+        "Value": "Windows 10 Version 2004 for 32-bit Systems"
+      },
+      {
+        "ProductID": "11767",
+        "Value": "Windows 10 Version 2004 for ARM64-based Systems"
+      },
+      {
+        "ProductID": "11768",
+        "Value": "Windows 10 Version 2004 for x64-based Systems"
+      },
+      {
+        "ProductID": "11769",
+        "Value": "Windows Server, version 2004 (Server Core installation)"
+      },
+      {
+        "ProductID": "11800",
+        "Value": "Windows 10 Version 20H2 for x64-based Systems"
+      },
+      {
+        "ProductID": "11801",
+        "Value": "Windows 10 Version 20H2 for 32-bit Systems"
+      },
+      {
+        "ProductID": "11802",
+        "Value": "Windows 10 Version 20H2 for ARM64-based Systems"
+      },
+      {
+        "ProductID": "11803",
+        "Value": "Windows Server, version 20H2 (Server Core Installation)"
+      },
+      {
+        "ProductID": "11896",
+        "Value": "Windows 10 Version 21H1 for x64-based Systems"
+      },
+      {
+        "ProductID": "11897",
+        "Value": "Windows 10 Version 21H1 for ARM64-based Systems"
+      },
+      {
+        "ProductID": "11898",
+        "Value": "Windows 10 Version 21H1 for 32-bit Systems"
+      },
+      {
+        "ProductID": "9312",
+        "Value": "Windows Server 2008 for 32-bit Systems Service Pack 2"
+      },
+      {
+        "ProductID": "9318",
+        "Value": "Windows Server 2008 for x64-based Systems Service Pack 2"
+      },
+      {
+        "ProductID": "9344",
+        "Value": "Windows Server 2008 for x64-based Systems Service Pack 2 (Server Core installation)"
+      }
+    ]
+  },
+  "Vulnerability": [
+    {
+      "Title": {
+        "Value": "Windows Print Spooler Remote Code Execution Vulnerability"
+      },
+      "Notes": [
+        {
+          "Title": "Description",
+          "Type": 2,
+          "Ordinal": "0",
+          "Value": "<p>A remote code execution vulnerability exists when the Windows Print Spooler service improperly performs privileged file operations. An attacker who successfully exploited this vulnerability could run arbitrary code with SYSTEM privileges. An attacker could then install programs; view, change, or delete data; or create new accounts with full user rights.</p>\n<p>UPDATE July 7, 2021: The security update for Windows Server 2012, Windows Server 2016 and Windows 10, Version 1607 have been released. Please see the Security Updates table for the applicable update for your system. We recommend that you install these updates immediately. If you are unable to install these updates, see the FAQ and Workaround sections in this CVE for information on how to help protect your system from this vulnerability.</p>\n<p>In addition to installing the updates, in order to secure your system, you must confirm that the following registry settings are set to 0 (zero) or are not defined (<strong>Note</strong>: These registry keys do not exist by default, and therefore are already at the secure setting.), also that your Group Policy setting are correct (see FAQ):</p>\n<ul>\n<li>HKEY_LOCAL_MACHINE\\SOFTWARE\\Policies\\Microsoft\\Windows NT\\Printers\\PointAndPrint</li>\n<li>NoWarningNoElevationOnInstall = 0 (DWORD) or not defined (default setting)</li>\n<li>UpdatePromptSettings = 0 (DWORD) or not defined (default setting)</li>\n</ul>\n<p><strong>Having NoWarningNoElevationOnInstall set to 1 makes your system vulnerable by design.</strong></p>\n<p>UPDATE July 6, 2021: Microsoft has completed the investigation and has released security updates to address this vulnerability. Please see the Security Updates table for the applicable update for your system. We recommend that you install these updates immediately. If you are unable to install these updates, see the FAQ and Workaround sections in this CVE for information on how to help protect your system from this vulnerability. See also <a href=\"https://support.microsoft.com/topic/31b91c02-05bc-4ada-a7ea-183b129578a7\">KB5005010: Restricting installation of new printer drivers after applying the July 6, 2021 updates</a>.</p>\n<p>Note that the security updates released on and after July 6, 2021 contain protections for CVE-2021-1675 and the additional remote code execution exploit in the Windows Print Spooler service known as “PrintNightmare”, documented in CVE-2021-34527.</p>\n"
+        },
+        {
+          "Title": "FAQ",
+          "Type": 4,
+          "Ordinal": "10",
+          "Value": "<p><strong>Is this the vulnerability that has been referred to publicly as PrintNightmare?</strong></p>\n<p>Yes, Microsoft has assigned CVE-2021-34527 to this vulnerability.</p>\n<p><strong>Is this vulnerability related to CVE-2021-1675?</strong></p>\n<p>This vulnerability is similar but distinct from the vulnerability that is assigned CVE-2021-1675.  The attack vector is different as well. CVE-2021-1675 was addressed by the security update released on June 8, 2021.</p>\n<p><strong>Did the June 2021 update introduce this vulnerability?</strong></p>\n<p>No, the vulnerability existed before the June 8, 2021 security update.</p>\n<p><strong>All versions of Windows are listed in the Security Updates table. Are all versions vulnerable?</strong></p>\n<p>All versions of Windows are vulnerable. As of July 7, 2021, Microsoft has released security updates for this vulnerability for all supported versions of Windows listed in the security updates table in this CVE.</p>\n<p><strong>What vulnerabilities do the security updates released on and after July 6, 2021 address?</strong></p>\n<p>The security updates released on and after July 6, 2021 contain protections for a remote code execution exploit in the Windows Print Spooler service known as “PrintNightmare”, documented in CVE-2021-34527, as well as for CVE-2021-1675.</p>\n<p><strong>Are Domain Controllers known to be affected by the vulnerability?</strong></p>\n<p>Domain controllers are affected if the print spooler service is enabled.</p>\n<p><strong>Are client systems and member servers that are not domain controllers known to be affected by the vulnerability?</strong></p>\n<p>Yes. All editions of Windows are affected.</p>\n<p><strong>How can I see attack activity on my network related to this vulnerability?</strong></p>\n<p>Security products, like Microsoft 365 Defender, offer different ways to view relevant alerts and telemetry. Microsoft has published our recommendations for seeing this sort of behavior at our GitHub here: <a href=\"https://aka.ms/printspooler-rce-ahq\">Microsoft 365 Defender Hunting Queries</a>. Customers using other technologies can adapt this logic for use in their environments.</p>\n<p><strong>How is Point and Print technology affected by this particular vulnerability?</strong></p>\n<p>Point and Print is not directly related to this vulnerability, but certain configurations make systems vulnerable to exploitation.</p>\n<p><strong>How does Microsoft recommend implementing Point and Print restrictions to help secure my systems?</strong></p>\n<p>Please see  <a href=\"https://support.microsoft.com/en-us/topic/kb5005010-restricting-installation-of-new-printer-drivers-after-applying-the-july-6-2021-updates-31b91c02-05bc-4ada-a7ea-183b129578a7\">KB5005010: Restricting installation of new printer drivers after applying the July 6, 2021 updates</a> for complete information.</p>\n<p><strong>How do I assess my Point and Print security posture to determine if my Windows system is affected by this particular configuration?</strong></p>\n<p>Please see  <a href=\"https://support.microsoft.com/en-us/topic/kb5005010-restricting-installation-of-new-printer-drivers-after-applying-the-july-6-2021-updates-31b91c02-05bc-4ada-a7ea-183b129578a7\">KB5005010: Restricting installation of new printer drivers after applying the July 6, 2021 updates</a> for complete information.</p>\n"
+        },
+        {
+          "Title": "Windows Print Spooler Components",
+          "Type": 7,
+          "Ordinal": "20",
+          "Value": "Windows Print Spooler Components"
+        },
+        {
+          "Title": "Issuing CNA",
+          "Type": 8,
+          "Ordinal": "30",
+          "Value": "Microsoft"
+        }
+      ],
+      "DiscoveryDateSpecified": false,
+      "ReleaseDateSpecified": false,
+      "CVE": "CVE-2021-34527",
+      "ProductStatuses": [
+        {
+          "ProductID": [
+            "11568",
+            "11569",
+            "11570",
+            "11571",
+            "11572",
+            "11712",
+            "11713",
+            "11714",
+            "11896",
+            "11897",
+            "11898",
+            "11766",
+            "11767",
+            "11768",
+            "11769",
+            "11800",
+            "11801",
+            "11802",
+            "11803",
+            "10729",
+            "10735",
+            "10852",
+            "10853",
+            "10816",
+            "10855",
+            "10047",
+            "10048",
+            "10481",
+            "10482",
+            "10484",
+            "9312",
+            "10287",
+            "9318",
+            "9344",
+            "10051",
+            "10049",
+            "10378",
+            "10379",
+            "10483",
+            "10543"
+          ],
+          "Type": 3
+        }
+      ],
+      "Threats": [
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11568"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11569"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11570"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11571"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11572"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11712"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11713"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11714"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11896"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11897"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11898"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11766"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11767"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11768"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11769"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11800"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11801"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11802"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "11803"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10729"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10735"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10852"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10853"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10816"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10855"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10047"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10048"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10481"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10482"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10484"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "9312"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10287"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "9318"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "9344"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10051"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10049"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10378"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10379"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10483"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Remote Code Execution"
+          },
+          "ProductID": [
+            "10543"
+          ],
+          "Type": 0,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11568"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11569"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11570"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11571"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11572"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11712"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11713"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11714"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11896"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11897"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11898"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11766"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11767"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11768"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11769"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11800"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11801"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11802"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "11803"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10729"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10735"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10852"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10853"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10816"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10855"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10047"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10048"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10481"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10482"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10484"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "9312"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10287"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "9318"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "9344"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10051"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10049"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10378"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10379"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10483"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Critical"
+          },
+          "ProductID": [
+            "10543"
+          ],
+          "Type": 3,
+          "DateSpecified": false
+        },
+        {
+          "Description": {
+            "Value": "Publicly Disclosed:Yes;Exploited:Yes;Latest Software Release:Exploitation Detected;Older Software Release:Exploitation Detected;DOS:N/A"
+          },
+          "Type": 1,
+          "DateSpecified": false
+        }
+      ],
+      "CVSSScoreSets": [
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11568"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11569"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11570"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11571"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11572"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11712"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11713"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11714"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11896"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11897"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11898"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11766"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11767"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11768"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11769"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11800"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11801"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11802"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "11803"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10729"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10735"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10852"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10853"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10816"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10855"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10047"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10048"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10481"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10482"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10484"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "9312"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10287"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "9318"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "9344"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10051"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10049"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10378"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10379"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10483"
+          ]
+        },
+        {
+          "BaseScore": 8.8,
+          "TemporalScore": 8.2,
+          "Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C",
+          "ProductID": [
+            "10543"
+          ]
+        }
+      ],
+      "Remediations": [
+        {
+          "Description": {
+            "Value": "5004947"
+          },
+          "URL": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5004947",
+          "Supercedence": "5003646",
+          "ProductID": [
+            "11568",
+            "11569",
+            "11570",
+            "11571",
+            "11572"
+          ],
+          "Type": 2,
+          "DateSpecified": false,
+          "AffectedFiles": [],
+          "RestartRequired": {
+            "Value": "Yes"
+          },
+          "SubType": "Security Update",
+          "FixedBuild": "10.0.17763.2029"
+        },
+        {
+          "Description": {
+            "Value": "5004947"
+          },
+          "URL": "https://support.microsoft.com/help/5004947",
+          "ProductID": [
+            "11568",
+            "11569",
+            "11570",
+            "11571",
+            "11572"
+          ],
+          "Type": 5,
+          "DateSpecified": false,
+          "AffectedFiles": []
+        },
+        {
+          "Description": {
+            "Value": "5004946"
+          },
+          "URL": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5004946",
+          "Supercedence": "5003637",
+          "ProductID": [
+            "11712",
+            "11713",
+            "11714"
+          ],
+          "Type": 2,
+          "DateSpecified": false,
+          "AffectedFiles": [],
+          "RestartRequired": {
+            "Value": "Yes"
+          },
+          "SubType": "Security Update",
+          "FixedBuild": "10.0.18363.1646"
+        },
+        {
+          "Description": {
+            "Value": "5004945"
+          },
+          "URL": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5004945",
+          "Supercedence": "5003637",
+          "ProductID": [
+            "11896",
+            "11897",
+            "11898",
+            "11766",
+            "11767",
+            "11768",
+            "11769",
+            "11800",
+            "11801",
+            "11802",
+            "11803"
+          ],
+          "Type": 2,
+          "DateSpecified": false,
+          "AffectedFiles": [],
+          "RestartRequired": {
+            "Value": "Yes"
+          },
+          "SubType": "Security Update",
+          "FixedBuild": "10.0.19041.1803"
+        },
+        {
+          "Description": {
+            "Value": "5004945"
+          },
+          "URL": "https://support.microsoft.com/help/5004945",
+          "ProductID": [
+            "11896",
+            "11897",
+            "11898",
+            "11766",
+            "11767",
+            "11768",
+            "11769",
+            "11800",
+            "11801",
+            "11802",
+            "11803"
+          ],
+          "Type": 5,
+          "DateSpecified": false,
+          "AffectedFiles": []
+        },
+        {
+          "Description": {
+            "Value": "5004950"
+          },
+          "URL": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5004950",
+          "Supercedence": "5003638",
+          "ProductID": [
+            "10729",
+            "10735"
+          ],
+          "Type": 2,
+          "DateSpecified": false,
+          "AffectedFiles": [],
+          "RestartRequired": {
+            "Value": "Yes"
+          },
+          "SubType": "Security Update",
+          "FixedBuild": "10.0.10240.18969"
+        },
+        {
+          "Description": {
+            "Value": "5004948"
+          },
+          "URL": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5004948",
+          "Supercedence": "5003638",
+          "ProductID": [
+            "10852",
+            "10853",
+            "10816",
+            "10855"
+          ],
+          "Type": 2,
+          "DateSpecified": false,
+          "AffectedFiles": [],
+          "RestartRequired": {
+            "Value": "Yes"
+          },
+          "SubType": "Security Update"
+        },
+        {
+          "Description": {
+            "Value": "5004953"
+          },
+          "URL": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5004953",
+          "ProductID": [
+            "10047",
+            "10048",
+            "10051",
+            "10049"
+          ],
+          "Type": 2,
+          "DateSpecified": false,
+          "AffectedFiles": [],
+          "RestartRequired": {
+            "Value": "Yes"
+          },
+          "SubType": "Monthly Rollup",
+          "FixedBuild": "6.1.7601.25633"
+        },
+        {
+          "Description": {
+            "Value": "5004953"
+          },
+          "URL": "https://support.microsoft.com/help/5004953",
+          "ProductID": [
+            "10047",
+            "10048",
+            "10051",
+            "10049"
+          ],
+          "Type": 5,
+          "DateSpecified": false,
+          "AffectedFiles": []
+        },
+        {
+          "Description": {
+            "Value": "5004951"
+          },
+          "URL": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5004951",
+          "Supercedence": "5003667",
+          "ProductID": [
+            "10047",
+            "10048",
+            "10051",
+            "10049"
+          ],
+          "Type": 2,
+          "DateSpecified": false,
+          "AffectedFiles": [],
+          "RestartRequired": {
+            "Value": "Yes"
+          },
+          "SubType": "Security Only",
+          "FixedBuild": "6.1.7601.25633"
+        },
+        {
+          "Description": {
+            "Value": "5004951"
+          },
+          "URL": "https://support.microsoft.com/help/5004951",
+          "ProductID": [
+            "10047",
+            "10048",
+            "10051",
+            "10049"
+          ],
+          "Type": 5,
+          "DateSpecified": false,
+          "AffectedFiles": []
+        },
+        {
+          "Description": {
+            "Value": "5004954"
+          },
+          "URL": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5004954",
+          "Supercedence": "5003671",
+          "ProductID": [
+            "10481",
+            "10482",
+            "10484",
+            "10483",
+            "10543"
+          ],
+          "Type": 2,
+          "DateSpecified": false,
+          "AffectedFiles": [],
+          "RestartRequired": {
+            "Value": "Yes"
+          },
+          "SubType": "Monthly Rollup",
+          "FixedBuild": "6.3.9600.20046"
+        },
+        {
+          "Description": {
+            "Value": "5004954"
+          },
+          "URL": "https://support.microsoft.com/help/5004954",
+          "ProductID": [
+            "10481",
+            "10482",
+            "10484",
+            "10483",
+            "10543"
+          ],
+          "Type": 5,
+          "DateSpecified": false,
+          "AffectedFiles": []
+        },
+        {
+          "Description": {
+            "Value": "5004958"
+          },
+          "URL": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5004958",
+          "ProductID": [
+            "10481",
+            "10482",
+            "10483",
+            "10543"
+          ],
+          "Type": 2,
+          "DateSpecified": false,
+          "AffectedFiles": [],
+          "RestartRequired": {
+            "Value": "Yes"
+          },
+          "SubType": "Security Only",
+          "FixedBuild": "6.3.9600.20046"
+        },
+        {
+          "Description": {
+            "Value": "5004958"
+          },
+          "URL": "https://support.microsoft.com/help/5004958",
+          "ProductID": [
+            "10481",
+            "10482",
+            "10483",
+            "10543"
+          ],
+          "Type": 5,
+          "DateSpecified": false,
+          "AffectedFiles": []
+        },
+        {
+          "Description": {
+            "Value": "5004955"
+          },
+          "URL": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5004955",
+          "Supercedence": "5003661",
+          "ProductID": [
+            "9312",
+            "10287",
+            "9318",
+            "9344"
+          ],
+          "Type": 2,
+          "DateSpecified": false,
+          "AffectedFiles": [],
+          "RestartRequired": {
+            "Value": "Yes"
+          },
+          "SubType": "Monthly Rollup",
+          "FixedBuild": "6.0.6003.21138"
+        },
+        {
+          "Description": {
+            "Value": "5004955"
+          },
+          "URL": "https://support.microsoft.com/help/5004955",
+          "ProductID": [
+            "9312",
+            "10287",
+            "9318",
+            "9344"
+          ],
+          "Type": 5,
+          "DateSpecified": false,
+          "AffectedFiles": []
+        },
+        {
+          "Description": {
+            "Value": "5004959"
+          },
+          "URL": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5004959",
+          "ProductID": [
+            "9312",
+            "10287",
+            "9318",
+            "9344"
+          ],
+          "Type": 2,
+          "DateSpecified": false,
+          "AffectedFiles": [],
+          "RestartRequired": {
+            "Value": "Yes"
+          },
+          "SubType": "Security Only",
+          "FixedBuild": "6.0.6003.21138"
+        },
+        {
+          "Description": {
+            "Value": "5004959"
+          },
+          "URL": "https://support.microsoft.com/help/5004959",
+          "ProductID": [
+            "9312",
+            "10287",
+            "9318",
+            "9344"
+          ],
+          "Type": 5,
+          "DateSpecified": false,
+          "AffectedFiles": []
+        },
+        {
+          "Description": {
+            "Value": "5004956"
+          },
+          "URL": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5004956",
+          "Supercedence": "5003697",
+          "ProductID": [
+            "10378",
+            "10379"
+          ],
+          "Type": 2,
+          "DateSpecified": false,
+          "AffectedFiles": [],
+          "RestartRequired": {
+            "Value": "Yes"
+          },
+          "SubType": "Monthly Rollup"
+        },
+        {
+          "Description": {
+            "Value": "5004956"
+          },
+          "URL": "https://support.microsoft.com/help/5004956",
+          "ProductID": [
+            "10378",
+            "10379"
+          ],
+          "Type": 5,
+          "DateSpecified": false,
+          "AffectedFiles": []
+        },
+        {
+          "Description": {
+            "Value": "5004960"
+          },
+          "URL": "https://catalog.update.microsoft.com/v7/site/Search.aspx?q=KB5004960",
+          "ProductID": [
+            "10378",
+            "10379"
+          ],
+          "Type": 2,
+          "DateSpecified": false,
+          "AffectedFiles": [],
+          "RestartRequired": {
+            "Value": "Yes"
+          },
+          "SubType": "Security Only"
+        },
+        {
+          "Description": {
+            "Value": "5004960"
+          },
+          "URL": "https://support.microsoft.com/help/5004960",
+          "ProductID": [
+            "10378",
+            "10379"
+          ],
+          "Type": 5,
+          "DateSpecified": false,
+          "AffectedFiles": []
+        },
+        {
+          "Description": {
+            "Value": "<p><strong>Determine if the Print Spooler service is running</strong></p>\n<p>Run the following in Windows PowerShell:</p>\n<p><code>Get-Service -Name Spooler</code></p>\n<p>If the Print Spooler is running or if the service is not set to disabled, select one of the following options to either disable the Print Spooler service, or to Disable inbound remote printing through Group Policy:</p>\n<p><strong>Option 1 - Disable the Print Spooler service</strong></p>\n<p>If disabling the Print Spooler service is appropriate for your enterprise, use the following PowerShell commands:</p>\n<p><code>Stop-Service -Name Spooler -Force</code></p>\n<p><code>Set-Service -Name Spooler -StartupType Disabled</code></p>\n<p><strong>Impact of workaround</strong> Disabling the Print Spooler service disables the ability to print both locally and remotely.</p>\n<p><strong>Option 2 - Disable inbound remote printing through Group Policy</strong></p>\n<p>You can also configure the settings via Group Policy as follows:</p>\n<p>Computer Configuration / Administrative Templates / Printers</p>\n<p>Disable the “Allow Print Spooler to accept client connections:” policy to block remote attacks.</p>\n<p>You must restart the Print Spooler service for the group policy to take effect.</p>\n<p><strong>Impact of workaround</strong> This policy will block the remote attack vector by preventing inbound remote printing operations. The system will no longer function as a print server, but local printing to a directly attached device will still be possible.</p>\n<p>For more information see: <a href=\"https://docs.microsoft.com/en-us/troubleshoot/windows-server/printing/use-group-policy-to-control-ad-printer\">Use Group Policy settings to control printers</a>.</p>\n"
+          },
+          "Type": 0,
+          "DateSpecified": false,
+          "AffectedFiles": []
+        }
+      ],
+      "Acknowledgments": [],
+      "Ordinal": "0",
+      "RevisionHistory": [
+        {
+          "Number": "1.3",
+          "Date": "2021-07-02T07:00:00Z",
+          "Description": {
+            "Value": "<p>Updated FAQ information. This is an informational change only.</p>\n"
+          }
+        },
+        {
+          "Number": "1.4",
+          "Date": "2021-07-03T07:00:00Z",
+          "Description": {
+            "Value": "<p>Updated FAQ information. This is an informational change only.</p>\n"
+          }
+        },
+        {
+          "Number": "2.0",
+          "Date": "2021-07-06T07:00:00Z",
+          "Description": {
+            "Value": "<p>CVE updated to announce that Microsoft is releasing an update for several versions of Window to address this vulnerability. Updates are not yet available for Windows 10 version 1607, Windows Server 2016, or Windows Server 2012. Security updates for these versions of Windows will be released soon. Other information has been updated as well. This information will be updated when more information or updates are available.</p>\n"
+          }
+        },
+        {
+          "Number": "3.0",
+          "Date": "2021-07-07T07:00:00Z",
+          "Description": {
+            "Value": "<p>CVE updated to announce that Microsoft is releasing an update for Windows 10 version 1607, Windows Server 2016, and Windows Server 2012.  Other information has been updated as well.</p>\n"
+          }
+        },
+        {
+          "Number": "3.1",
+          "Date": "2021-07-08T07:00:00Z",
+          "Description": {
+            "Value": "<p>Added information to the executive summary and the FAQ sections. This is an informational change only.</p>\n"
+          }
+        },
+        {
+          "Number": "1.0",
+          "Date": "2021-07-01T07:00:00Z",
+          "Description": {
+            "Value": "<p>Information published.</p>\n"
+          }
+        },
+        {
+          "Number": "1.1",
+          "Date": "2021-07-02T07:00:00Z",
+          "Description": {
+            "Value": "<p>The information in the workaround section was updated. This an informational change only.</p>\n"
+          }
+        },
+        {
+          "Number": "1.2",
+          "Date": "2021-07-02T07:00:00Z",
+          "Description": {
+            "Value": "<p>CVE revised to update the FAQ, add a mitigation, and add the CVSS score. These are informational changes only.</p>\n"
+          }
+        }
+      ]
+    }
+  ]
+}
