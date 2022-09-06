@@ -20,7 +20,7 @@ jobs:
         python -m pip install setuptools wheel
         python setup.py sdist bidst_wheel
     - name: Publish
-      uses: pypa/gh-action-pypi-publish@master
+      uses: pypa/gh-action-pypi-publish@release/v1
       with:
         user: __token__
         password: ${{ secret.pypi_password }}
