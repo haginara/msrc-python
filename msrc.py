@@ -177,7 +177,7 @@ def get_cvrfs(query=None):
     response = requests.get(url, headers={"Accept": "application/json"})
     if response.status_code != 200:
         raise Exception(
-            "Failed to get a list of MS security udpates, " f"{response.status_code}"
+            "Failed to get a list of MS security updates, " f"{response.status_code}"
         )
     cvrfs = response.json().get("value", [])
     return cvrfs
