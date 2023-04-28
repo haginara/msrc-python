@@ -10,10 +10,13 @@ def test_msrc_cve():
         'sample.json'
     )
     sample = json.load(open(sample_path))
-    cvrf = msrc.CVRF(sample)
+    cvrf = msrc.CVRF(raw=sample)
     assert isinstance(cvrf, msrc.CVRF)
+    assert cvrf.title == "July 1, 2021 CVE Release"
+    assert isinstance(cvrf.vulnerabilites, msrc.Vulnerability)
 
 
 def test_msrc_search_cve():
-    cve = msrc.get_updates(vul_id="CVE-2017-0144")
+    msrc_client = msrc.MSRC()
+    cve = msrc_client.get_updates(vul_id="CVE-2017-0144")
     assert isinstance(cve, msrc.Vulnerability)
