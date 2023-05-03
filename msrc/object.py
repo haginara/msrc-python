@@ -3,10 +3,10 @@ from functools import partial
 from typing import (
     TypeVar,
     NewType,
-    get_type_hints,
     List,
     Dict,
     Any,
+    get_type_hints,
     Optional,
     Union,
     Tuple,
@@ -14,29 +14,6 @@ from typing import (
     get_args,
 )
 from functools import reduce
-import re
-
-
-def get_value(data, key, default=None):
-    """
-    Args:
-        data (dict): Dictionary data
-        key (str): key with '.' ex) a.b or a.b.1.c
-        default (Any: None): Default value when the key is not available
-    """
-    try:
-        for k in key.split("."):
-            if k.isdigit():
-                idx = int(k)
-                data = data[idx]
-            else:
-                data = data.get(k, default)
-    except Exception as e:
-        if default:
-            return default
-        raise e
-    return data
-
 
 """ Default Type """
 
@@ -182,7 +159,7 @@ class ProductTree(Base):
 class Note(Base):
     Title: str = ""
     Type: str = ""
-    Ordinal: str= "0"
+    Ordinal: str = "0"
     Value: str = ""
 
     @staticmethod
@@ -198,6 +175,7 @@ class ProductStatus(Base):
     @staticmethod
     def mapper(data: List[Dict]):
         return [ProductStatus(data=d) for d in data]
+
 
 @dataclass
 class Threat(Base):
@@ -258,11 +236,21 @@ class Vulnerability(Base):
     DiscoveryDateSpecified: bool = False
     ReleaseDateSpecified: bool = False
     CVE: str = ""
-    ProductStatuses: List[ProductStatus] = field(default_factory=list, metadata={"mapper": ProductStatus.mapper})
-    Threats: List[Threat] = field(default_factory=list, metadata={"mapper": ProductStatus.mapper})
-    CVSSScoreSets: List[CVSSScoreSet] = field(default_factory=list, metadata={"mapper": CVSSScoreSet.mapper})
-    Remediations: List[Remediation] = field(default_factory=list, metadata={"mapper": Remediation.mapper})
-    Acknowledgments: List[Acknowledgment] = field(default_factory=list, metadata={"mapper": RevisionHistory.mapper})
+    ProductStatuses: List[ProductStatus] = field(
+        default_factory=list, metadata={"mapper": ProductStatus.mapper}
+    )
+    Threats: List[Threat] = field(
+        default_factory=list, metadata={"mapper": ProductStatus.mapper}
+    )
+    CVSSScoreSets: List[CVSSScoreSet] = field(
+        default_factory=list, metadata={"mapper": CVSSScoreSet.mapper}
+    )
+    Remediations: List[Remediation] = field(
+        default_factory=list, metadata={"mapper": Remediation.mapper}
+    )
+    Acknowledgments: List[Acknowledgment] = field(
+        default_factory=list, metadata={"mapper": RevisionHistory.mapper}
+    )
     Ordinal: str = "0"
     RevisionHistory: List["RevisionHistory"] = field(
         default_factory=list, metadata={"mapper": RevisionHistory.mapper}
@@ -295,54 +283,3 @@ class CVRF(Base):
     Vulnerability: List[VulnerabilityType] = field(
         default_factory=list, metadata={"mapper": Vulnerability.mapper}
     )
-
-
-""" TEST """
-from pathlib import Path
-import json
-
-
-sample = {
-    "DocumentTitle": {"Value": "July 1, 2021 CVE Release"},
-    "DocumentType": {"Value": "Security Update"},
-    "DocumentPublisher": {
-        "ContactDetails": {"Value": "secure@microsoft.com"},
-        "IssuingAuthority": {
-            "Value": "The Microsoft Security Response Center (MSRC) identifies, monitors, resolves, and responds to security incidents and Microsoft software security vulnerabilities. For more information, see http://www.microsoft.com/security/msrc."
-        },
-        "Type": 0,
-    },
-    "DocumentTracking": {
-        "Identification": {"ID": {"Value": "2021-Jul"}, "Alias": {"Value": "2021-Jul"}},
-        "RevisionHistory": [
-            {
-                "Number": "6",
-                "Date": "2021-07-08T07:00:00Z",
-                "Description": {"Value": "July 1, 2021 CVE Release"},
-            }
-        ],
-        "Status": 2,
-        "Version": "1.0",
-        "InitialReleaseDate": "2021-07-01T07:00:00Z",
-        "CurrentReleaseDate": "2021-07-08T07:00:00Z",
-    },
-}
-sample: Dict[str, Any] = json.loads(Path("tests/sample.json").read_text())
-
-cvrf: CVRF = CVRF(data=sample)
-print(f"{cvrf.DocumentTitle=}")
-print(f"{cvrf.DocumentType=}")
-print(f"{cvrf.DocumentTracking.RevisionHistory[0].Description=}")
-print(f"{cvrf.DocumentPublisher.IssuingAuthority=}")
-print(f"{cvrf.ProductTree.Branch[0].Name=}")
-print(f"{cvrf.ProductTree.Branch[0].Items[0].Items[0]=}")
-print(f"{cvrf.ProductTree.FullProductName[0]=}")
-print(f"{cvrf.DocumentNotes=}")
-print(f"{cvrf.Vulnerability[0].Title=}")
-print(f"{cvrf.Vulnerability[0].CVE=}")
-print(f"{cvrf.Vulnerability[0].Threats[0]=}")
-print(f"{cvrf.Vulnerability[0].CVSSScoreSets[0]=}")
-print(f"{cvrf.Vulnerability[0].Remediations[0]=}")
-print(f"{cvrf.Vulnerability[0].RevisionHistory[0]=}")
-print(f"{cvrf.Vulnerability[0].ProductStatuses[0]=}")
-
