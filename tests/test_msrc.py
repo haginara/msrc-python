@@ -1,6 +1,7 @@
 # coding: utf-8
 import json
-import msrc
+from msrc import CVRF, Vulnerability
+from msrc.api import MSRC
 import os
 
 
@@ -10,10 +11,13 @@ def test_msrc_cve():
         'sample.json'
     )
     sample = json.load(open(sample_path))
-    cvrf = msrc.CVRF(sample)
-    assert isinstance(cvrf, msrc.CVRF)
+    cvrf = CVRF(data=sample)
+    assert isinstance(cvrf, CVRF)
+    assert cvrf.DocumentTitle == "July 1, 2021 CVE Release"
+    assert isinstance(cvrf.Vulnerability[0], Vulnerability)
 
 
 def test_msrc_search_cve():
-    cve = msrc.get_updates(vul_id="CVE-2017-0144")
-    assert isinstance(cve, msrc.Vulnerability)
+    msrc_client = MSRC()
+    cve = msrc_client.get_updates(vul_id="CVE-2017-0144")
+    assert isinstance(cve, Vulnerability)
