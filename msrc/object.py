@@ -259,6 +259,7 @@ class Vulnerability(Base):
     @staticmethod
     def mapper(data: List["Vulnerability"]):
         return [Vulnerability(data=d) for d in data]
+    
 
 
 CVRFType = TypeVar("CVRFType", bound="CVRF")
@@ -283,3 +284,10 @@ class CVRF(Base):
     Vulnerability: List[VulnerabilityType] = field(
         default_factory=list, metadata={"mapper": Vulnerability.mapper}
     )
+
+    def get_cve(self, cve_id: str) -> Optional[VulnerabilityType]:
+        """ Find, and get a CVE data """
+        for vuln in self.Vulnerability:
+            if vuln.CVE == cve_id:
+                return vuln
+        return None

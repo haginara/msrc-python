@@ -73,4 +73,4 @@ class MSRC(object):
         if vul_id:
             cvrf: CVRF = self.get_cvrf(cvrfs[0]["ID"])
             return cvrf.get_cve(vul_id)
-        return [self.get_cvrf(cvrf["ID"]) for cvrf in cvrfs]
+        return [self.get_cve(cvrf.ID) for cvrf in cvrfs]
