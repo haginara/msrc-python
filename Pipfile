@@ -5,12 +5,13 @@ verify_ssl = true
 
 [dev-packages]
 flake8 = "*"
-black = {git = "git://github.com/psf/black"}
+black = "*"
 pylint = "*"
 pytest = "*"
 
 [packages]
 requests = "*"
+certifi = ">=2023.7.22"
 
 [requires]
 python_version = "3"
